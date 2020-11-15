@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://cohete.png" type="Texture" id=1]
+[ext_resource path="res://nave_nivel_meteoro/nave.gd" type="Script" id=2]
+[ext_resource path="res://nave_nivel_meteoro/particulas_fuego_nave.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 6 )
+
+[node name="nave_meteoro" type="Area2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 0 )
+shape = SubResource( 1 )
+
+[node name="particulas_fuego_nave" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1, 0 )
+gravity = Vector2( -98, 0 )
+
+[node name="parti_estab_down" type="CPUParticles2D" parent="."]
+position = Vector2( 8, 0 )
+amount = 4
+lifetime = 0.5
+
+[node name="parti_estab_up" type="CPUParticles2D" parent="."]
+position = Vector2( 8, 0 )
+amount = 4
+lifetime = 0.5
+gravity = Vector2( 0, -98 )
+
+[node name="parti_estab_left_up" type="CPUParticles2D" parent="."]
+position = Vector2( 8, 0 )
+amount = 4
+lifetime = 0.5
+flag_align_y = true
+gravity = Vector2( 98, -98 )
+
+[node name="parti_estab_left_down" type="CPUParticles2D" parent="parti_estab_left_up"]
+amount = 4
+lifetime = 0.5
+flag_align_y = true
+gravity = Vector2( 98, 98 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 8, 0 )
+rotation = 1.5708
+texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_nave_meteoro_body_entered"]
