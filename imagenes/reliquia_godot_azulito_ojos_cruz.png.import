@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cofre.png-0056554d766d43be6be11cb8a337fb3b.stex"
+path="res://.import/reliquia_godot_azulito_ojos_cruz.png-c94ff25bca62eb209cc1a9f750326b2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cofre.png"
-dest_files=[ "res://.import/cofre.png-0056554d766d43be6be11cb8a337fb3b.stex" ]
+source_file="res://imagenes/reliquia_godot_azulito_ojos_cruz.png"
+dest_files=[ "res://.import/reliquia_godot_azulito_ojos_cruz.png-c94ff25bca62eb209cc1a9f750326b2e.stex" ]
 
 [params]
 

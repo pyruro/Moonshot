@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cohete.png-62371a3f0501b3bdf735ff9d55f3752c.stex"
+path="res://.import/pilar_luna.png-037cba3dd776ec39828a0a7ff098c0c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cohete.png"
-dest_files=[ "res://.import/cohete.png-62371a3f0501b3bdf735ff9d55f3752c.stex" ]
+source_file="res://imagenes/pilar_luna.png"
+dest_files=[ "res://.import/pilar_luna.png-037cba3dd776ec39828a0a7ff098c0c6.stex" ]
 
 [params]
 

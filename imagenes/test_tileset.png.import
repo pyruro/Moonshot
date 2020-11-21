@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/reliquia_godot_blanco_ojos_cruz.png-29671ee73bf1d413ea5a92c0bd1c9466.stex"
+path="res://.import/test_tileset.png-81b2959e345251c56194e468015a0f56.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://reliquia_godot_blanco_ojos_cruz.png"
-dest_files=[ "res://.import/reliquia_godot_blanco_ojos_cruz.png-29671ee73bf1d413ea5a92c0bd1c9466.stex" ]
+source_file="res://imagenes/test_tileset.png"
+dest_files=[ "res://.import/test_tileset.png-81b2959e345251c56194e468015a0f56.stex" ]
 
 [params]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://space_background_2.png" type="Texture" id=1]
+[ext_resource path="res://space_background_3.png" type="Texture" id=2]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_limit_end = Vector2( 400, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 200, 0 )
+texture = ExtResource( 2 )
+centered = false

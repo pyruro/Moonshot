@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 var speed = 25
 var movimiento = Vector2(0,0)
@@ -47,8 +47,11 @@ func move(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 	position += velocity * delta
+	position.x = clamp(position.x, 0, 200)
+	position.y = clamp(position.y, 0, 100)
 
 
-func _on_nave_meteoro_body_entered(body):
+func _on_nave_meteoro_body_entered(_body):
 	emit_signal("hit")
-	$CollisionShape2D.disabled = true
+	print("hit")
+#	$CollisionShape2D.disabled = true

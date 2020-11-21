@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/interruptor_luna.png-0ada8df3598e6739996a9067365ac82b.stex"
+path="res://.import/puerta_luna.png-bc25c3f575552f05cd78998723e126e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interruptor_luna.png"
-dest_files=[ "res://.import/interruptor_luna.png-0ada8df3598e6739996a9067365ac82b.stex" ]
+source_file="res://imagenes/puerta_luna.png"
+dest_files=[ "res://.import/puerta_luna.png-bc25c3f575552f05cd78998723e126e7.stex" ]
 
 [params]
 

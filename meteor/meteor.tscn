@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://meteoro.png" type="Texture" id=1]
+[ext_resource path="res://imagenes/meteoro.png" type="Texture" id=1]
 [ext_resource path="res://meteor/meteor.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.05325
 
-[node name="meteor" type="RigidBody2D"]
+[node name="meteor" type="RigidBody2D" groups=[
+"Roca",
+]]
 position = Vector2( 98.2738, 47.7195 )
 gravity_scale = 0.0
 linear_velocity = Vector2( -20, 0 )

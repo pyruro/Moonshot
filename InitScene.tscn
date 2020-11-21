@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://basic_rectangle.png" type="Texture" id=1]
+[ext_resource path="res://imagenes/basic_rectangle.png" type="Texture" id=1]
+[ext_resource path="res://space_background_2.png" type="Texture" id=2]
 [ext_resource path="res://Lander.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 12.5 )
 
 [node name="InitScene" type="Node2D"]
+
+[node name="space_background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
 
 [node name="Suelo" type="StaticBody2D" parent="."]
 position = Vector2( 100, 87.5 )

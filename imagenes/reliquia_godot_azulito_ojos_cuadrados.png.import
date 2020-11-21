@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pilar_luna.png-6e8f0274180c5c4d4de93fd94939217d.stex"
+path="res://.import/reliquia_godot_azulito_ojos_cuadrados.png-714868cd9098603e13418354def84589.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pilar_luna.png"
-dest_files=[ "res://.import/pilar_luna.png-6e8f0274180c5c4d4de93fd94939217d.stex" ]
+source_file="res://imagenes/reliquia_godot_azulito_ojos_cuadrados.png"
+dest_files=[ "res://.import/reliquia_godot_azulito_ojos_cuadrados.png-714868cd9098603e13418354def84589.stex" ]
 
 [params]
 

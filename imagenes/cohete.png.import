@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/basic_rectangle.png-825fb3770be1af0f99bec2cd810aaf5f.stex"
+path="res://.import/cohete.png-2ae513d91ddeffc2be6a907a1208c1a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://basic_rectangle.png"
-dest_files=[ "res://.import/basic_rectangle.png-825fb3770be1af0f99bec2cd810aaf5f.stex" ]
+source_file="res://imagenes/cohete.png"
+dest_files=[ "res://.import/cohete.png-2ae513d91ddeffc2be6a907a1208c1a1.stex" ]
 
 [params]
 

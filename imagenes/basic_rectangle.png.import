@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/test_tileset.png-f0fd475d362a466443daaea4d83a9158.stex"
+path="res://.import/basic_rectangle.png-fa4aea4524f1bae129e722d994a56337.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test_tileset.png"
-dest_files=[ "res://.import/test_tileset.png-f0fd475d362a466443daaea4d83a9158.stex" ]
+source_file="res://imagenes/basic_rectangle.png"
+dest_files=[ "res://.import/basic_rectangle.png-fa4aea4524f1bae129e722d994a56337.stex" ]
 
 [params]
 

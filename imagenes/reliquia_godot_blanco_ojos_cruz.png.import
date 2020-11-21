@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/reliquia_godot_azulito_ojos_cruz.png-08558316578ece074742083892374472.stex"
+path="res://.import/reliquia_godot_blanco_ojos_cruz.png-4b69fef861ac0166f0c043860b5db8f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://reliquia_godot_azulito_ojos_cruz.png"
-dest_files=[ "res://.import/reliquia_godot_azulito_ojos_cruz.png-08558316578ece074742083892374472.stex" ]
+source_file="res://imagenes/reliquia_godot_blanco_ojos_cruz.png"
+dest_files=[ "res://.import/reliquia_godot_blanco_ojos_cruz.png-4b69fef861ac0166f0c043860b5db8f5.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/totem_godot.png-848a44c7b2da63a06becd67a39c2b470.stex"
+path="res://.import/dungeon_sheet.png-df8a1548e5eadf43a6ed58ebe0b56540.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://totem_godot.png"
-dest_files=[ "res://.import/totem_godot.png-848a44c7b2da63a06becd67a39c2b470.stex" ]
+source_file="res://imagenes/dungeon_sheet.png"
+dest_files=[ "res://.import/dungeon_sheet.png-df8a1548e5eadf43a6ed58ebe0b56540.stex" ]
 
 [params]
 
