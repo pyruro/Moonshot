@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://puzzle_minigame/piezas_puzle/pieza_1.png" type="Texture" id=1]
 [ext_resource path="res://puzzle_minigame/piezas_puzle/pieza_3.png" type="Texture" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://puzzle_minigame/piezas_puzle/pieza_4.png" type="Texture" id=8]
 [ext_resource path="res://puzzle_minigame/piezas_puzle/pieza_6.png" type="Texture" id=9]
 [ext_resource path="res://piezaAColocar.gd" type="Script" id=10]
-[ext_resource path="res://BotonRotacion.gd" type="Script" id=11]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends KinematicBody2D
@@ -24,7 +23,7 @@ onready var pieza_seleccionada = Node
 var dragging = false
 
 signal dragsignal
-signal selectsignal
+signal selectsignal(pieza_seleccionada)
 
 func _ready():
 	connect(\"dragsignal\",self,\"_set_drag_pc\")
@@ -53,7 +52,7 @@ func _on_piezaAColocar_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			emit_signal(\"dragsignal\")
-			emit_signal(\"selectsignal\")
+			emit_signal(\"selectsignal\",get_node(\".\"))
 			pieza_seleccionada = get_node(\".\")
 			print(pieza_seleccionada.name)
 			print(pieza_seleccionada.rotation_degrees)
@@ -72,17 +71,6 @@ func _on_lugar_p1_body_entered(body):
 func _on_lugar_p1_body_exited(body):
 	colocacion_correcta_pieza = 0
 	print(\"hola \"+body.name)
-
-
-
-func _on_Button_pressed():
-#	pieza_seleccionada.rotation_degrees += 90
-	pass # Replace with function body.
-
-
-func _on_Button2_pressed():
-	pieza_seleccionada.rotation_degrees -= 90
-	pass # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -237,36 +225,21 @@ shape = SubResource( 9 )
 
 [node name="Sprite9" type="Sprite" parent="colocarP9"]
 texture = ExtResource( 6 )
-
-[node name="BotonRotacion" type="Button" parent="."]
-margin_left = 56.0
-margin_top = 6.0
-margin_right = 92.0
-margin_bottom = 26.0
-text = "+90"
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="BotonAntiRotacion" type="Button" parent="."]
-margin_left = 57.0
-margin_top = 31.0
-margin_right = 90.0
-margin_bottom = 51.0
-text = "-90"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="input_event" from="colocarP1" to="colocarP1" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP1" to="." method="_on_colocarP1_selectsignal"]
 [connection signal="input_event" from="colocarP2" to="colocarP2" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP2" to="." method="_on_colocarP2_selectsignal"]
 [connection signal="input_event" from="colocarP3" to="colocarP3" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP3" to="." method="_on_colocarP3_selectsignal"]
 [connection signal="input_event" from="colocarP4" to="colocarP4" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP4" to="." method="_on_colocarP4_selectsignal"]
 [connection signal="input_event" from="colocarP5" to="colocarP5" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP5" to="." method="_on_colocarP5_selectsignal"]
 [connection signal="input_event" from="colocarP6" to="colocarP6" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP6" to="." method="_on_colocarP6_selectsignal"]
 [connection signal="input_event" from="colocarP7" to="colocarP7" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP7" to="." method="_on_colocarP7_selectsignal"]
 [connection signal="input_event" from="colocarP8" to="colocarP8" method="_on_piezaAColocar_input_event"]
+[connection signal="selectsignal" from="colocarP8" to="." method="_on_colocarP8_selectsignal"]
 [connection signal="input_event" from="colocarP9" to="colocarP9" method="_on_piezaAColocar_input_event"]
-[connection signal="pressed" from="BotonRotacion" to="colocarP1" method="_on_Button_pressed"]
-[connection signal="pressed" from="BotonRotacion" to="." method="_on_BotonRotacion_pressed"]
-[connection signal="pressed" from="BotonAntiRotacion" to="colocarP1" method="_on_Button2_pressed"]
+[connection signal="selectsignal" from="colocarP9" to="." method="_on_colocarP9_selectsignal"]
