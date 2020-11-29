@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://space_background_2.png" type="Texture" id=1]
-[ext_resource path="res://space_background_3.png" type="Texture" id=2]
+[ext_resource path="res://imagenes/space_background_2.png" type="Texture" id=1]
+[ext_resource path="res://imagenes/space_background_3.png" type="Texture" id=2]
+
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 scroll_limit_end = Vector2( 400, 0 )

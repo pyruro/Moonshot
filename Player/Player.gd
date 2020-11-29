@@ -6,6 +6,7 @@ var tile_size = 16 #length and width of the player
 var last_position = Vector2() #desde donde nos movemos, posicion actual
 var target_position = Vector2() #a donde nos movemos
 var movedir = Vector2() #direccion
+onready var animationPlayer = $AnimationPlayer
 
 onready var ray =  $RayCast2D
 
@@ -13,7 +14,8 @@ func _ready():
 	position = position.snapped(Vector2(tile_size, tile_size)) #nos aseguramos de que este bien colocado en el grid
 	last_position = position
 	target_position = position
-
+	
+	
 func _process(delta):
 	#MOVEMENT
 	
@@ -22,9 +24,9 @@ func _process(delta):
 		target_position = last_position
 	else:
 		position += speed * movedir * delta
-		
 		if position.distance_to(last_position) >= tile_size - speed * delta: #el -speed * delta es para que sea suave el movim
 			position = target_position
+		
 	
 	#IDLE
 	if position == target_position:

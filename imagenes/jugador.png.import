@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/space_background_3.png-06dc1a030d7a807e12a45fd87c2d126c.stex"
+path="res://.import/jugador.png-6458e585051ee77243269cf7ec9a019f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://space_background_3.png"
-dest_files=[ "res://.import/space_background_3.png-06dc1a030d7a807e12a45fd87c2d126c.stex" ]
+source_file="res://imagenes/jugador.png"
+dest_files=[ "res://.import/jugador.png-6458e585051ee77243269cf7ec9a019f.stex" ]
 
 [params]
 
