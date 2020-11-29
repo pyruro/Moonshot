@@ -87,7 +87,11 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="Area2D"]
+position = Vector2( 8, 8 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -8 )

@@ -27,3 +27,4 @@ shape = SubResource( 1 )
 
 [node name="Nave" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76.4942, 24.6268 )
+rollSpeed = 2

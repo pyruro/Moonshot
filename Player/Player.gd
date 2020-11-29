@@ -10,8 +10,10 @@ onready var animationPlayer = $AnimationPlayer
 
 onready var ray =  $RayCast2D
 
+
+
 func _ready():
-	position = position.snapped(Vector2(tile_size, tile_size)) #nos aseguramos de que este bien colocado en el grid
+	position = position.snapped(Vector2(tile_size/2, tile_size/2)) #nos aseguramos de que este bien colocado en el grid
 	last_position = position
 	target_position = position
 	

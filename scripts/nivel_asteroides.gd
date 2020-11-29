@@ -18,9 +18,12 @@ onready var label_tiempo = $label_tiempo
 
 const meteor = preload("res://meteor/meteor.tscn")
 
+onready var portal = $Portal
+
 func _ready():
 	spawn()
 	parallax_luna.get_node("ParallaxLayer").hide()
+	remove_child(portal)
 	pass
 	
 func spawn():
@@ -48,3 +51,4 @@ func _on_Timer_timeout():
 #	parallax_luna.visible = not parallax_luna.visible
 	parallax_luna.get_node("ParallaxLayer").show()
 	parallax.get_node("ParallaxLayer").hide()
+	add_child(portal)
