@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://imagenes/paisaje_luna.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="paisaje_luna" type="Sprite" parent="."]
+position = Vector2( 99.8891, 46.3182 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )

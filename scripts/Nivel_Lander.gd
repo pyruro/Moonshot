@@ -1,25 +1,28 @@
 extends Node2D
 
-onready var pieza1_correcta = 0
 
-signal signal_pieza_correcta(pieza_correcta)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
-
+onready var portal = $Portal
+onready var timer = $Timer
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	remove_child(portal)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	print(timer.time_left)
+	pass
 
 
-func _on_lugar_p1_body_entered(body):
-	if body.rotation_degrees == 0 and body.name == "colocarP1":
-		pieza1_correcta = 1
-		emit_signal("signal_pieza_correcta", pieza1_correcta)
+func _on_Area2D_body_entered(body):
+	if body.name == "Nave":
+		timer.start()
+	
+
+func _on_Timer_timeout():
+	add_child(portal)
 	pass # Replace with function body.

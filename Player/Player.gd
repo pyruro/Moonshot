@@ -6,7 +6,12 @@ var tile_size = 16 #length and width of the player
 var last_position = Vector2() #desde donde nos movemos, posicion actual
 var target_position = Vector2() #a donde nos movemos
 var movedir = Vector2() #direccion
+
+var last_direction
+
 onready var animationPlayer = $AnimationPlayer
+onready var animationTree = $AnimationTree
+onready var animationState = animationTree.get("parameters/playback")
 
 onready var ray =  $RayCast2D
 
@@ -41,7 +46,7 @@ func get_movedir():
 	var RIGHT = Input.is_action_pressed("ui_right")
 	var UP = Input.is_action_pressed("ui_up")
 	var DOWN = Input.is_action_pressed("ui_down")
-
+	
 	movedir.x = -int(LEFT) + int(RIGHT)
 	movedir.y = -int(UP) + int(DOWN)
 	
@@ -50,4 +55,8 @@ func get_movedir():
 		
 	if movedir != Vector2.ZERO:
 		ray.cast_to = movedir * tile_size / 2
-	
+		animationTree.set("parameters/Idle/blend_position", movedir)
+		animationTree.set("parameters/Walk/blend_position", movedir)
+		animationState.travel("Walk")
+	else:
+		animationState.travel("Idle")

@@ -22,18 +22,32 @@ onready var lp7 = get_node("lugares_puzle/lugar_p7")
 onready var lp8 = get_node("lugares_puzle/lugar_p8")
 onready var lp9 = get_node("lugares_puzle/lugar_p9")
 
+onready var lugares_puzle = get_node("lugares_puzle")
 
 onready var nonulo
 
+onready var p1lp1 = lugares_puzle.pieza1_correcta
 
 func _ready():
+	print(p1lp1)
 	print(p1.dragging)
+#	lugares_puzle.connect("signal_pieza_correcta",Node2D,[])
 	pass # Replace with function body.
+
+
+func _handle():
+	print("uweueuueueu")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	print(p1lp1)
+	if p1lp1:
+		print("YESSSS")
+		p1lp1 = 0
 	pass
+
+
 
 #func test():
 #	if ("selector_pieza_seleccionada" != null in nodo_con_piezas):

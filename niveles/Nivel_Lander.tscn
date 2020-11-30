@@ -1,13 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Lander.tscn" type="PackedScene" id=1]
 [ext_resource path="res://imagenes/basic_rectangle.png" type="Texture" id=2]
 [ext_resource path="res://imagenes/space_background_2.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Nivel_Lander.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Portal.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 99.627, 2.58667 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.41484, 2.11391 )
+
 [node name="Nivel_Lander" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="space_background" type="Sprite" parent="."]
 texture = ExtResource( 3 )
@@ -28,3 +34,51 @@ shape = SubResource( 1 )
 [node name="Nave" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76.4942, 24.6268 )
 rollSpeed = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+position = Vector2( 72.831, 25.3906 )
+polygon = PoolVector2Array( 18.894, 63.7227, 59.083, 19.101, 58.8962, 63.8393 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 84.4336, 92.758 )
+polygon = PoolVector2Array( 7.24322, -3.34149, 47.3789, -47.9367, 46.7843, -3.34149 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Polygon2D2" type="Polygon2D" parent="StaticBody2D2"]
+position = Vector2( 208.47, 25.3906 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+polygon = PoolVector2Array( 18.894, 63.7227, 59.083, 19.101, 58.8962, 63.8393 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 196.638, 92.6518 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+polygon = PoolVector2Array( 7.24322, -3.34149, 47.3789, -47.9367, 46.7843, -3.34149 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 140.537, 86.267 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+modulate = Color( 0.133333, 0.482353, 0.890196, 1 )
+scale = Vector2( 0.165315, 0.160413 )
+texture = ExtResource( 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 140.6, 80.6679 )
+escena = "Nivel_puzle"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
