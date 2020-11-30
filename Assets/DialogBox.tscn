@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Schrdinger.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Story_level/DialogBox.gd" type="Script" id=2]
+[ext_resource path="res://Story_level/DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Schrdinger.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://imagenes/next_indicator.png" type="Texture" id=3]
 [ext_resource path="res://imagenes/mural.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "IDLE"
@@ -25,32 +25,25 @@ tracks/0/keys = {
 "values": [ Vector2( 89.4528, 88.6811 ), Vector2( 89.453, 90 ) ]
 }
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DialogBox" type="Control" parent="."]
+[node name="DialogBox" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 52.0
 margin_right = -45.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+[node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -61,15 +54,18 @@ custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "Hello there dskdskdsk daksdsakdsa dka a"
 text = "Hello there dskdskdsk daksdsakdsa dka a"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="next_indicator" type="Sprite" parent="DialogBox"]
+[node name="next_indicator" type="Sprite" parent="."]
 visible = false
 position = Vector2( 89.4529, 89.4608 )
 texture = ExtResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/next_indicator"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="next_indicator"]
 autoplay = "IDLE"
 anims/IDLE = SubResource( 2 )
 
-[node name="Tween" type="Tween" parent="DialogBox"]
-[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]
+[node name="Tween" type="Tween" parent="."]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

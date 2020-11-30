@@ -1,9 +1,16 @@
 extends Control
 
 var dialog = [
-	'Hello there, this tutorial is awesome.',
-	"I'm learing so much from it.",
-	"Like a dialog box."
+	'Cada 100 años unos seres tienen como tradición',
+	"disparar a la luna. Consideran acertar como señal",
+	"de buena suerte (Son raros, lo sé).",
+	"Se acerca el día y tu labor es reparar la luna",
+	"si se diese el caso.",
+	"Para ello ya te has preparado cogiendo las 9 piezas",
+	"del artefacto godotiano",
+	"Tu familia siempre se ha encargado de esto",
+	"No puedes defraudar a la humanidad",
+	"No por un estúpido MOONSHOT"
 ]
 
 var dialog_index = 0
