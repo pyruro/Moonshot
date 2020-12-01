@@ -1,5 +1,9 @@
 extends Node2D
 
+
+onready var Dialog_box = $DialogBox
+
+
 onready var nodo_con_piezas = get_node("nodo_con_piezas_puzle")
 onready var p1 = get_node("nodo_con_piezas_puzle/colocarP1")
 onready var p2 = get_node("nodo_con_piezas_puzle/colocarP2")
@@ -39,6 +43,7 @@ onready var p9lp9 = lugares_puzle.pieza9_correcta
 var todo_correcto = []
 
 func _ready():
+	Dialog_box.hide()
 #	lugares_puzle.connect("signal_pieza_correcta",Node2D,[])
 	pass # Replace with function body.
 
@@ -94,7 +99,7 @@ func _process(_delta):
 		p9.position = lp9.global_position
 		p9.dragging=false
 	if p1lp1==1 and p2lp2==1 and p3lp3==1 and p4lp4==1 and p5lp5==1 and p6lp6==1 and p7lp7==1 and p8lp8==1 and p9lp9:
-		print("VICTORIA")
+		Dialog_box.show()
 
 
 

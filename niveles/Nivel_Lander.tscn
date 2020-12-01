@@ -39,6 +39,7 @@ rollSpeed = 2
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
 position = Vector2( 72.831, 25.3906 )
+color = Color( 0.67451, 0.67451, 0.67451, 1 )
 polygon = PoolVector2Array( 18.894, 63.7227, 59.083, 19.101, 58.8962, 63.8393 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -51,6 +52,7 @@ polygon = PoolVector2Array( 7.24322, -3.34149, 47.3789, -47.9367, 46.7843, -3.34
 position = Vector2( 208.47, 25.3906 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+color = Color( 0.67451, 0.67451, 0.67451, 1 )
 polygon = PoolVector2Array( 18.894, 63.7227, 59.083, 19.101, 58.8962, 63.8393 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]

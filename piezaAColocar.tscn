@@ -101,7 +101,7 @@ extents = Vector2( 2.5, 2.5 )
 script = ExtResource( 10 )
 
 [node name="colocarP1" type="KinematicBody2D" parent="."]
-position = Vector2( 28, 15 )
+position = Vector2( 118, 45 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -115,7 +115,7 @@ shape = SubResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="colocarP2" type="KinematicBody2D" parent="."]
-position = Vector2( 38, 15 )
+position = Vector2( 128, 45 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -129,7 +129,7 @@ shape = SubResource( 3 )
 texture = ExtResource( 3 )
 
 [node name="colocarP3" type="KinematicBody2D" parent="."]
-position = Vector2( 48, 15 )
+position = Vector2( 138, 45 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -143,7 +143,7 @@ shape = SubResource( 2 )
 texture = ExtResource( 2 )
 
 [node name="colocarP4" type="KinematicBody2D" parent="."]
-position = Vector2( 28, 25 )
+position = Vector2( 118, 55 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -157,7 +157,7 @@ shape = SubResource( 4 )
 texture = ExtResource( 8 )
 
 [node name="colocarP5" type="KinematicBody2D" parent="."]
-position = Vector2( 38, 25 )
+position = Vector2( 128, 55 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -171,7 +171,7 @@ shape = SubResource( 5 )
 texture = ExtResource( 4 )
 
 [node name="colocarP6" type="KinematicBody2D" parent="."]
-position = Vector2( 48, 25 )
+position = Vector2( 138, 55 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -185,7 +185,7 @@ shape = SubResource( 6 )
 texture = ExtResource( 9 )
 
 [node name="colocarP7" type="KinematicBody2D" parent="."]
-position = Vector2( 28, 35 )
+position = Vector2( 118, 65 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -199,7 +199,7 @@ shape = SubResource( 7 )
 texture = ExtResource( 7 )
 
 [node name="colocarP8" type="KinematicBody2D" parent="."]
-position = Vector2( 38, 35 )
+position = Vector2( 128, 65 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
@@ -213,7 +213,7 @@ shape = SubResource( 8 )
 texture = ExtResource( 5 )
 
 [node name="colocarP9" type="KinematicBody2D" parent="."]
-position = Vector2( 48, 35 )
+position = Vector2( 138, 65 )
 input_pickable = true
 script = SubResource( 1 )
 __meta__ = {
