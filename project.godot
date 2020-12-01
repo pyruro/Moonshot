@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="Lunar Landing"
 run/main_scene="res://niveles/intro_historia.tscn"
-config/icon="res://imagenes/icon.png"
 
 [display]
 

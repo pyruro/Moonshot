@@ -7,7 +7,7 @@ export (String) var escena
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+onready var fin_dialogo = dialogo.fin_dialogo
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +17,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if not dialogo:
+	fin_dialogo = dialogo.fin_dialogo
+	if fin_dialogo == 1:
+		dialogo.hide()
 		animatedSprite.play()
 
 #	get_tree().change_scene("res://niveles/" + escena + ".tscn")

@@ -10,7 +10,7 @@ var dialog = [
 "You can NOT let humanity down!",
 "Not for a stupid MOONSHOT!"
 ]
-
+onready var fin_dialogo = 0
 var dialog_index = 0
 var finished = false
 
@@ -33,7 +33,8 @@ func load_dialog():
 		)
 		$Tween.start()
 	else:
-		queue_free()
+#		queue_free()
+		fin_dialogo = 1
 
 	dialog_index += 1
 
