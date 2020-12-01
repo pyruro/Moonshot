@@ -95,7 +95,6 @@ func _process(_delta):
 		p9.dragging=false
 	if p1lp1==1 and p2lp2==1 and p3lp3==1 and p4lp4==1 and p5lp5==1 and p6lp6==1 and p7lp7==1 and p8lp8==1 and p9lp9:
 		print("VICTORIA")
-		p1lp1 = 0
 
 
 
