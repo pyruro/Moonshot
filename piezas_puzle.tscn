@@ -37,9 +37,6 @@ extents = Vector2( 2.5, 2.5 )
 
 [node name="lugares_puzle" type="Node2D"]
 script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="lugar_p1" type="Area2D" parent="."]
 __meta__ = {
@@ -55,6 +52,7 @@ position = Vector2( 2.5, 3 )
 shape = SubResource( 1 )
 
 [node name="lugar_p2" type="Area2D" parent="."]
+position = Vector2( 5, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -62,107 +60,114 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="lugar_p2"]
 texture = ExtResource( 1 )
 centered = false
-offset = Vector2( 5, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p2"]
-position = Vector2( 8, 3 )
+position = Vector2( 3, 3 )
 shape = SubResource( 2 )
 
 [node name="lugar_p3" type="Area2D" parent="."]
+position = Vector2( 11, 0 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p3"]
-position = Vector2( 11, 0 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p3"]
-position = Vector2( 13.5, 3 )
+position = Vector2( 2.5, 3 )
 shape = SubResource( 1 )
 
 [node name="lugar_p4" type="Area2D" parent="."]
+position = Vector2( 0, 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p4"]
-position = Vector2( 0, 6 )
 texture = ExtResource( 6 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p4"]
-position = Vector2( 2.5, 8.5 )
+position = Vector2( 2.5, 2.5 )
 shape = SubResource( 3 )
 
 [node name="lugar_p5" type="Area2D" parent="."]
+position = Vector2( 5, 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p5"]
-position = Vector2( 5, 6 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p5"]
-position = Vector2( 8, 8.5 )
+position = Vector2( 3, 2.5 )
 shape = SubResource( 4 )
 
 [node name="lugar_p6" type="Area2D" parent="."]
+position = Vector2( 11, 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p6"]
-position = Vector2( 11, 6 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p6"]
-position = Vector2( 13.5, 8.5 )
+position = Vector2( 2.5, 2.5 )
 shape = SubResource( 5 )
 
 [node name="lugar_p7" type="Area2D" parent="."]
+position = Vector2( 0, 11 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p7"]
-position = Vector2( 0, 11 )
 texture = ExtResource( 8 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p7"]
-position = Vector2( 2.5, 13.5 )
+position = Vector2( 2.5, 2.5 )
 shape = SubResource( 6 )
 
 [node name="lugar_p8" type="Area2D" parent="."]
+position = Vector2( 5, 11 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p8"]
-position = Vector2( 5, 11 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p8"]
-position = Vector2( 8, 13.5 )
+position = Vector2( 3, 2.5 )
 shape = SubResource( 7 )
 
 [node name="lugar_p9" type="Area2D" parent="."]
+position = Vector2( 11, 11 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="lugar_p9"]
-position = Vector2( 11, 11 )
 texture = ExtResource( 9 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lugar_p9"]
-position = Vector2( 13.5, 13.5 )
+position = Vector2( 2.5, 2.5 )
 shape = SubResource( 8 )
 [connection signal="body_entered" from="lugar_p1" to="." method="_on_lugar_p1_body_entered"]
+[connection signal="body_entered" from="lugar_p2" to="." method="_on_lugar_p2_body_entered"]
+[connection signal="body_entered" from="lugar_p3" to="." method="_on_lugar_p3_body_entered"]
+[connection signal="body_entered" from="lugar_p4" to="." method="_on_lugar_p4_body_entered"]
+[connection signal="body_entered" from="lugar_p5" to="." method="_on_lugar_p5_body_entered"]
+[connection signal="body_entered" from="lugar_p6" to="." method="_on_lugar_p6_body_entered"]
+[connection signal="body_entered" from="lugar_p7" to="." method="_on_lugar_p7_body_entered"]
+[connection signal="body_entered" from="lugar_p8" to="." method="_on_lugar_p8_body_entered"]
+[connection signal="body_entered" from="lugar_p9" to="." method="_on_lugar_p9_body_entered"]
